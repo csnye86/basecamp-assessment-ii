@@ -1,14 +1,14 @@
 // #1 Create an object called 'me' that has three keys, 'firstname' 'age' and 'state'. Assign the keys the appropriate values.
 
 var me = {
-  firstname: "Cameron",
-  age: 31,
-  state: "Washington"
+  firstname : "Cameron",
+  age : 31,
+  state : "Washington"
 };
 
 // #2 Add a new key/value pair to the me object using dot notation. The new key should be 'favecolor' and set it to your favorite color as a string
 
-me.favecolor = "red";
+me.faveColor = "gray";
 
 // #3 Below is an object, 'message'. Below it, add a 'text' key using bracket notation and assign it a string of whatever you would like.
 //DON'T TOUCH THE CODE BELOW
@@ -25,10 +25,10 @@ message["text"] = "How are you today?";
 
 var adjustCount = {
   upVote : function(num){
-    num+1;
+    return num+1;
   },
   downVote : function(num){
-    num-1;
+    return num-1;
   }
 };
 
@@ -52,21 +52,18 @@ var myArrayCopy = myArray.slice(0);
 var myNumbers = [333, 1, 4, 5, 511, 34, 88, 77, 222];
 //DON'T TOUCH THE CODE ABOVE
 
-function evensOnly(arr) {
-	var evensArray = [];
-	for (i=0;i<arr.length;i++){
-	  if (arr[i] % 2 === 0){
-	  evensArray.push(arr[i]);
+var evensArray = [];
+
+function evensOnly() {
+	for (i=0;i<myNumbers.length;i++){
+	  if (myNumbers[i] % 2 === 0){
+	  evensArray.push(myNumbers[i]);
      };
-    return evensArray;
-  };
+  }
+  return evensArray;
+};
 
 // #9 Using filter(), return only your friends of the array of people below. Assign it to a variable called 'trueFriends'.
-
-const trueFriends = peopleIknow.filter(val => {
-  peopleIknow.friend === true;
-});
-
 
 var peopleIknow = [
   { name: "Steve", friend: true },
@@ -77,11 +74,21 @@ var peopleIknow = [
   { name: "Holly", friend: true }
 ];
 
-// #10 create a function called indexFinder and loop over the randomNumbers array below and return the result into a new array called 'indexes' with just their indexes. Be sure to invoke indexFinder.
-let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
-function indexFinder(){
-  for(i=0;i<randomNumbers.length;i++){
-    indexes = new array();
+var trueFriends = [];
+trueFriends = peopleIknow.filter((val) => val.friend === true);
 
+// #10 create a function called indexFinder and loop over the randomNumbers array below and return the result into a new array called 'indexes' with just their indexes. Be sure to invoke indexFinder.
+let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0]
+
+var indexes = [];
+
+function indexFinder(arr){
+  for(i=0;i<arr.length;i++){
+    indexes = arr.indexOf(i>=0);
   };
+  return indexes;
 };
+indexFinder(randomNumbers);
+
+
+
